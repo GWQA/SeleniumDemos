@@ -19,7 +19,7 @@ public class ShoppingWebsiteTest {
 	@Before
 	public void init() {
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	@Test
@@ -49,15 +49,6 @@ public class ShoppingWebsiteTest {
 		WebElement email = driver.findElement(By.id("email_create"));
 		email.sendKeys("robotorobert1@gmail.com");
 		email.sendKeys(Keys.ENTER);
-
-		WebElement gender = driver.findElement(By.id("id_gender1"));
-		gender.click();
-
-		WebElement fName = driver.findElement(By.xpath("//*[@id=\"customer_firstname\"]"));
-		fName.sendKeys("Robert");
-
-		WebElement lName = driver.findElement(By.xpath("//*[@id=\"customer_lastname\"]"));
-		lName.sendKeys("Roboto");
 	}
 
 }
